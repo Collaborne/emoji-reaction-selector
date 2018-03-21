@@ -46,18 +46,18 @@ The available emojis to be selected are five: 'love', 'happy', 'surprised', 'sad
 			<div class="item" name="angry">😡</div>
 		</iron-selector>
 	</template>
-</dom-module>
 
-<script>
-	class EmojiReactionSelector extends Polymer.Element {
-		static get is() {
-			return 'emoji-reaction-selector';
-		}
-		static get properties() {
-			return {
-				selected: String
+	<script>
+		class EmojiReactionSelector extends Polymer.Element {
+			static get is() {
+				return 'emoji-reaction-selector';
+			}
+			static get properties() {
+				return {
+					selected: String
+				}
 			}
 		}
-	}
-	window.customElements.define(EmojiReactionSelector.is, EmojiReactionSelector);
-</script>
+		window.customElements.define(EmojiReactionSelector.is, EmojiReactionSelector);
+	</script>
+</dom-module>
