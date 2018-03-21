@@ -1,27 +1,29 @@
 {
-	"name": "emoji-reaction-selector",
-	"authors": [
-	  "collaborne"
-	],
-	"description": "Polymer component that allows to select between a set of predefined emojis",
-	"main": "emoji-reaction-selector.html",
-	"keywords": [
-	  "web-components",
-	  "polymer",
-	  "emoji",
-	  "reaction"
-	],
-	"license": "Apache 2",
-	"homepage": "https://github.com/collaborne/emoji-reaction-selector",
-	"ignore": [
-	  "**/.*"
-	],
-	"dependencies": {
-	  "polymer": "Polymer/polymer#^2.0.0"
-	},
-	"devDependencies": {
-	  "iron-component-page": "PolymerElements/iron-component-page#^2.0.0",
-	  "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
-	  "web-component-tester": "*"
-	}
+  "name": "emoji-reaction-selector",
+  "authors": [
+    "collaborne"
+  ],
+  "description": "Polymer component that allows to select between a set of predefined emojis",
+  "main": "emoji-reaction-selector.html",
+  "keywords": [
+    "web-components",
+    "polymer",
+    "emoji",
+    "reaction"
+  ],
+  "license": "Apache 2",
+  "homepage": "https://github.com/collaborne/emoji-reaction-selector",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "iron-selector": "PolymerElements/iron-selector^2.1.0",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#^2.0.3"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^2.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "*"
   }
+}

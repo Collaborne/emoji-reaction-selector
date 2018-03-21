@@ -1,7 +1,12 @@
+<!doctype html>
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../iron-selector/iron-selector.html">
 
 <!--
 A Polymer component that allows to select between a set of predefined emojis
+
+The available emojis to be selected are five: 'love', 'happy', 'surprised', 'sad', 'angry'
 
 @demo demo/index.html
 -->
@@ -10,10 +15,38 @@ A Polymer component that allows to select between a set of predefined emojis
 	<template>
 
 		<style>
+			.selector {
+				display: block;
+				@apply --layout-horizontal;
+				height: 42px;
+			}
 
+			.item {
+				padding: 0 4px;
+				width: 40px;
+				font-size: 32px;
+				cursor: pointer;
+				text-align: center;
+				vertical-align: middle;
+				line-height:40px;
+			}
+
+			.item:hover {
+				font-size: 40px;
+			}
+
+			.iron-selected {
+				font-size: 40px;
+			}
 		</style>
 
-		HELLO WORLD
+		<iron-selector class="selector" attr-for-selected="name" selected="{{selected}}" selected-attribute="selected">
+			<div class="item" name="love">❤️</div>
+			<div class="item" name="happy">😆</div>
+			<div class="item" name="surprised">😮</div>
+			<div class="item" name="sad">😢</div>
+			<div class="item" name="angry">😡</div>
+		</iron-selector>
 	</template>
 </dom-module>
 
@@ -21,12 +54,17 @@ A Polymer component that allows to select between a set of predefined emojis
 
 (function() {
 
-	Polymer({
-		is: 'emoji-reaction-selector',
-		properties: {
-
-		},
-	});
+	class EmojiReactionSelector extends Polymer.Element {
+		static get is() {
+			return 'emoji-reaction-selector';
+		}
+		static get properties() {
+			return {
+				selected: String
+			}
+		}
+	}
+	window.customElements.define(EmojiReactionSelector.is, EmojiReactionSelector);
 
 })();
 
