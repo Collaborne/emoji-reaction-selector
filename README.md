@@ -13,9 +13,7 @@ Polymer component that allows to select between a set of predefined emojis
 ```
 -->
 ```html
-<emoji-reaction-selector
-	selected="love"
-></emoji-reaction-selector>
+<emoji-reaction-selector selected="love"></emoji-reaction-selector>
 ```
 
 ## License
