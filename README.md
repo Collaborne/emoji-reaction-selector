@@ -1,4 +1,4 @@
-# emoji-reaction-selector [![Build Status](https://travis-ci.org/Collaborne/emoji-reaction-selector.svg?branch=master)](https://travis-ci.org/Collaborne/emoji-reaction-selector)
+# emoji-reaction-selector [![Build Status](https://travis-ci.org/Collaborne/emoji-reaction-selector.svg?branch=master)](https://travis-ci.org/Collaborne/emoji-reaction-selector) [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/Collaborne/emoji-reaction-selector)
 
 Polymer component that allows to select between a set of predefined emojis
 
