@@ -11,9 +11,7 @@ The available emojis to be selected are five: 'love', 'happy', 'surprised', 'sad
 @demo demo/index.html
 -->
 <dom-module id="emoji-reaction-selector">
-
 	<template>
-
 		<style>
 			.selector {
 				display: block;
@@ -28,7 +26,7 @@ The available emojis to be selected are five: 'love', 'happy', 'surprised', 'sad
 				cursor: pointer;
 				text-align: center;
 				vertical-align: middle;
-				line-height:40px;
+				line-height: 40px;
 			}
 
 			.item:hover {
@@ -51,9 +49,6 @@ The available emojis to be selected are five: 'love', 'happy', 'surprised', 'sad
 </dom-module>
 
 <script>
-
-(function() {
-
 	class EmojiReactionSelector extends Polymer.Element {
 		static get is() {
 			return 'emoji-reaction-selector';
@@ -65,7 +60,4 @@ The available emojis to be selected are five: 'love', 'happy', 'surprised', 'sad
 		}
 	}
 	window.customElements.define(EmojiReactionSelector.is, EmojiReactionSelector);
-
-})();
-
 </script>
