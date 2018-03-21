@@ -17,7 +17,7 @@
     "**/.*"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^2.0.0",
+    "polymer": "^2.5.0",
     "iron-selector": "PolymerElements/iron-selector#^2.1.0",
     "iron-flex-layout": "PolymerElements/iron-flex-layout#^2.0.3"
   },
