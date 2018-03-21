@@ -54,7 +54,10 @@ The available emojis to be selected are five: 'love', 'happy', 'surprised', 'sad
 			}
 			static get properties() {
 				return {
-					selected: String
+					selected: {
+						type: String,
+						notify: true
+					}
 				}
 			}
 		}

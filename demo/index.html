@@ -1,25 +1,30 @@
 <html>
-	<head>
-		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-		<link rel="import" href="../../paper-styles/demo-pages.html">
-		<link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-		<link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-		<link rel="import" href="../emoji-reaction-selector.html">
-	</head>
+<head>
+	<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+	<link rel="import" href="../../paper-styles/demo-pages.html">
+	<link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+	<link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+	<link rel="import" href="../emoji-reaction-selector.html">
+</head>
 
-	<body>
-		<h2>Emoji selector</h2>
-		<demo-snippet>
-			<template>
-				<emoji-reaction-selector></emoji-reaction-selector>
-			</template>
-		</demo-snippet>
+<body>
+	<h2>Emoji selector</h2>
+	<demo-snippet>
+		<template>
+			<dom-bind>
+				<template>
+					<emoji-reaction-selector selected="{{selected}}"></emoji-reaction-selector>
+					Value: [[selected]]
+				</template>
+			</dom-bind>
+		</template>
+	</demo-snippet>
 
-		<h2>Emoji selector with preselected value</h2>
-		<demo-snippet>
-			<template>
-				<emoji-reaction-selector selected="love"></emoji-reaction-selector>
-			</template>
-		</demo-snippet>
-	</body>
+	<h2>Emoji selector with preselected value</h2>
+	<demo-snippet>
+		<template>
+			<emoji-reaction-selector selected="love"></emoji-reaction-selector>
+		</template>
+	</demo-snippet>
+</body>
 </html>
