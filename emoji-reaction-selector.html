@@ -2,6 +2,7 @@
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../iron-selector/iron-selector.html">
 <link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="emoji-reaction-mixin.html">
 
 <!--
 A Polymer component that allows to select between a set of predefined emojis
@@ -44,25 +45,24 @@ The available emojis to be selected are five: 'love', 'happy', 'surprised', 'sad
 		</style>
 
 		<iron-selector class="selector" attr-for-selected="name" selected="{{selected}}" selected-attribute="selected">
-			<div class="item" name="love">❤️</div>
-			<div class="item" name="happy">😆</div>
-			<div class="item" name="surprised">😮</div>
-			<div class="item" name="sad">😢</div>
-			<div class="item" name="angry">😡</div>
+			<template is="dom-repeat" items="[[getAllEmojis()]]" as="emoji">
+				<div class="item" name="[[emoji.name]]">[[emoji.emoji]]</div>
+			</template>
 		</iron-selector>
 	</template>
 
 	<script>
-		class EmojiReactionSelector extends Polymer.Element {
+		class EmojiReactionSelector extends Polymer.EmojiReactionMixin(Polymer.Element) {
 			static get is() {
 				return 'emoji-reaction-selector';
 			}
+
 			static get properties() {
 				return {
 					selected: {
 						type: String,
-						notify: true
-					}
+						notify: true,
+					},
 				}
 			}
 		}
