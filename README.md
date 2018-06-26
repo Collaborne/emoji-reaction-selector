@@ -1,5 +1,8 @@
 # emoji-reaction-selector [![Build Status](https://travis-ci.org/Collaborne/emoji-reaction-selector.svg?branch=master)](https://travis-ci.org/Collaborne/emoji-reaction-selector) [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/Collaborne/emoji-reaction-selector)
 
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/Collaborneemoji-reaction-selector)
+[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/Collaborneemoji-reaction-selector.svg)](https://vaadin.com/directory/component/Collaborneemoji-reaction-selector)
+
 Polymer component that allows to select between a set of predefined emojis
 
 <!--
