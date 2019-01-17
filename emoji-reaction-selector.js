@@ -1,18 +1,19 @@
-<!doctype html>
-<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
-<link rel="import" href="../iron-selector/iron-selector.html">
-<link rel="import" href="../polymer/polymer-element.html">
-<link rel="import" href="emoji-reaction-mixin.html">
+import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import '@polymer/iron-selector/iron-selector';
+import '@polymer/iron-flex-layout/iron-flex-layout';
 
-<!--
+import { EmojiReactionMixin } from './emoji-reaction-mixin.js';
+
+/**
 A Polymer component that allows to select between a set of predefined emojis
 
 The available emojis to be selected are five: 'love', 'happy', 'surprised', 'sad', 'angry'
 
 @demo demo/index.html
--->
-<dom-module id="emoji-reaction-selector">
-	<template>
+*/
+class EmojiReactionSelector extends EmojiReactionMixin(PolymerElement) {
+	static get template() {
+		return html`
 		<style>
 			:host {
 				display: inline-block;
@@ -48,24 +49,20 @@ The available emojis to be selected are five: 'love', 'happy', 'surprised', 'sad
 			<template is="dom-repeat" items="[[getAllEmojis()]]" as="emoji">
 				<div class="item" name="[[emoji.name]]">[[emoji.emoji]]</div>
 			</template>
-		</iron-selector>
-	</template>
+		</iron-selector>`;
+	}
 
-	<script>
-		class EmojiReactionSelector extends Polymer.EmojiReactionMixin(Polymer.Element) {
-			static get is() {
-				return 'emoji-reaction-selector';
-			}
+	static get is() {
+		return 'emoji-reaction-selector';
+	}
 
-			static get properties() {
-				return {
-					selected: {
-						type: String,
-						notify: true,
-					},
-				}
-			}
+	static get properties() {
+		return {
+			selected: {
+				type: String,
+				notify: true,
+			},
 		}
-		window.customElements.define(EmojiReactionSelector.is, EmojiReactionSelector);
-	</script>
-</dom-module>
+	}
+}
+window.customElements.define(EmojiReactionSelector.is, EmojiReactionSelector);
