@@ -5,16 +5,6 @@
 
 Polymer component that allows to select between a set of predefined emojis
 
-<!--
-```
-<custom-element-demo>
-  <template>
-    <link rel="import" href="emoji-reaction-selector.html">
-    <next-code-block></next-code-block>
-  </template>
-</custom-element-demo>
-```
--->
 ```html
 <emoji-reaction-selector selected="love"></emoji-reaction-selector>
 ```
