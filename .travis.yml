@@ -1,20 +1,19 @@
 dist: trusty
 group: beta
-
 language: node_js
 node_js:
 - node
-addons:
-  firefox: latest-esr
 cache:
   directories:
   - node_modules
-  - "$HOME/.cache/bower"
 before_install:
-- "if [ -d node_modules ] && [ x$(cat node_modules/.last-node-version 2>/dev/null) != x$(node -e 'console.log(process.version)') ]; then npm rebuild --update-binary && node -e 'console.log(process.version)' > node_modules/.last-node-version; fi"
-before_script:
-- npm install web-component-tester bower polymer-cli
-- $(npm bin)/bower install
-- $(npm bin)/polymer lint || true
-script:
-- echo 'No tests yet'
+- if [ -d node_modules ] && [ x$(cat node_modules/.last-node-version 2>/dev/null) != x$(node -e 'console.log(process.version)') ]; then npm rebuild --update-binary && node -e 'console.log(process.version)' > node_modules/.last-node-version; fi
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: npm@collaborne.com
+  api_key:
+    secure: "ua6wnp/eaeePFPcItwf0AWSTbuL1AdOMLurMejXOczohGV8qJrPOb3ONKMCiOKJ7pQ/oE/516ZCrfwTKEVR6QWHZMqnGZqoOoHp4GAzJJ+v8tVFDeNSYyEa6Afdk8hFkNxj8qG85kLU30c657HRlqxfrOIeyRjtGtN/1PlriR6rMKyi1fplW82vEMw1x34lZRuSFs5cdxVE6md6Dmu/+gLMF32FcCqI/N9CjajWma8Zg0AudWn53/Re8sIA34BPj1RCKBSCmsqy5H1NNTM6ZtRsRirzv/X09neqrHNc+MS2u61/FkTI6Vmth6wfHI02PwG35MHHkTyiFIL/LowwkStuuP9yrqjiOisKXy3JlddH0FF879w7dKvvpbACn34rm+gkZZ45nm2seTydHE3oH+k9D24cOSK4UOWl8vlKqwu/JrVE9F9FkPaB08jn5KKmAI99f9oWREkCY5BRVFXMJmsscsRrvaVYTnmIR9JvkTdTko4qqDYqTnor5K1tzneA8TKfYOAImhKaAmjP0a0RRj520M10r8vX82vWGc9UukAOkdivqKnRDu1sj9SZJrdMxc8jMr+iT7zW/RPBhHxr3f2XgIk7Ix+UZbMesF3AU4BXlWnMbondG42YWzxwCRhvgC8AGgF2CXFcEsnUgFd/msWVN+feqbR4GeOMu5krfIFU="
+  on:
+    tags: true
+    condition: $(node -e 'console.log("v" + require("./package.json").version)') = ${TRAVIS_TAG}

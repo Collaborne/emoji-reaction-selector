@@ -1,17 +1,15 @@
 const EMOJIS = {
-	love: '❤️',
-	happy: '😆',
-	surprised: '😮',
-	sad: '😢',
 	angry: '😡',
+	happy: '😆',
+	love: '❤️',
+	sad: '😢',
+	surprised: '😮',
 };
 
 /**
  * This mixin provides mapping of emoji names to emoji HTML characters
- *
- * @polymer
- * @mixinFunction
  */
+
 export const EmojiReactionMixin = parent => class EmojiReactionMixinImpl extends parent {
 	getEmoji(name) {
 		return EMOJIS[name];
@@ -19,8 +17,8 @@ export const EmojiReactionMixin = parent => class EmojiReactionMixinImpl extends
 
 	getAllEmojis() {
 		return Object.keys(EMOJIS).map(name => ({
-			name,
 			emoji: EMOJIS[name],
+			name,
 		}));
 	}
 };

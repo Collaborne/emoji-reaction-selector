@@ -1,5 +1,5 @@
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
-import { EmojiReactionMixin } from './emoji-reaction-mixin.js';
+import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
+import {EmojiReactionMixin} from './emoji-reaction-mixin.js';
 
 /**
 A Polymer component that shows one emoji reaction
@@ -27,7 +27,7 @@ class EmojiReaction extends EmojiReactionMixin(PolymerElement) {
 	static get properties() {
 		return {
 			value: String,
-		}
+		};
 	}
 }
 window.customElements.define(EmojiReaction.is, EmojiReaction);

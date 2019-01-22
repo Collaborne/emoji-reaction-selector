@@ -1,8 +1,9 @@
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
-import '@polymer/iron-selector/iron-selector';
-import '@polymer/iron-flex-layout/iron-flex-layout';
+import {PolymerElement, html} from '@polymer/polymer/polymer-element.js';
 
-import { EmojiReactionMixin } from './emoji-reaction-mixin.js';
+import '@polymer/iron-flex-layout/iron-flex-layout';
+import '@polymer/iron-selector/iron-selector';
+
+import {EmojiReactionMixin} from './emoji-reaction-mixin.js';
 
 /**
 A Polymer component that allows to select between a set of predefined emojis
@@ -59,10 +60,10 @@ class EmojiReactionSelector extends EmojiReactionMixin(PolymerElement) {
 	static get properties() {
 		return {
 			selected: {
-				type: String,
 				notify: true,
+				type: String,
 			},
-		}
+		};
 	}
 }
 window.customElements.define(EmojiReactionSelector.is, EmojiReactionSelector);
