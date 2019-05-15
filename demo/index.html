@@ -4,8 +4,8 @@
 			import '@webcomponents/webcomponentsjs/webcomponents-loader.js';
 			import '@polymer/iron-demo-helpers/demo-pages-shared-styles.js';
 			import '@polymer/iron-demo-helpers/demo-snippet.js';
-			import '../emoji-reaction-selector.js';
-			import '../emoji-reaction.js';
+			import '../dist/emoji-reaction-selector.js';
+			import '../dist/emoji-reaction.js';
 		</script>
 	</head>
 
@@ -15,11 +15,21 @@
 			<template>
 				<dom-bind>
 					<template>
-						<emoji-reaction-selector selected="{{selected}}"></emoji-reaction-selector>
+						<emoji-reaction-selector
+							selected="[[selected]]"
+							on-selected-changed="onSelectedChanged"
+						></emoji-reaction-selector>
 						<br>
 						Value: [[selected]]
 					</template>
-				</dom-bind>
+
+					<script>
+						const scope = document.querySelector('dom-bind');
+						scope.onSelectedChanged = e => {
+							scope.selected = e.detail.value;
+						};
+					</script>
+			</dom-bind>
 			</template>
 		</demo-snippet>
 
