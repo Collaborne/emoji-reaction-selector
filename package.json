@@ -9,7 +9,7 @@
   ],
   "homepage": "https://github.com/collaborne/emoji-reaction-selector",
   "name": "@collaborne/emoji-reaction-selector",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "main": "dist/emoji-reaction-selector.js",
   "types": "dist/emoji-reaction-selector.d.ts",
   "author": "Collaborne B.V",
